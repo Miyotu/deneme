@@ -1,11 +1,158 @@
-QWidget { color: #ECEFF4; background-color: #2E3440; }
-QPushButton { background: #3B4252; border: 1px solid #434C5E; padding: 6px 10px; }
-QPushButton:hover { background: #434C5E; }
-QLineEdit, QSpinBox, QComboBox { background: #3B4252; border: 1px solid #434C5E; padding: 4px; }
-QTabWidget::pane { border: 1px solid #434C5E; }
-QTabBar::tab { background: #3B4252; padding: 6px; }
-QTabBar::tab:selected { background: #4C566A; }
-QListWidget { background: #2E3440; border: 1px solid #434C5E; }
-QMenu { background: #3B4252; color: #ECEFF4; border: 1px solid #434C5E; }
-QMenu::item:selected { background: #4C566A; }
-QStatusBar { background: #3B4252; }
+/* Nord Theme - Arctic, North-Bluish Color Palette */
+QWidget {
+    background-color: #2e3440;
+    color: #eceff4;
+    font-family: "Source Code Pro", "Consolas", monospace;
+    font-size: 13px;
+    selection-background-color: #5e81ac;
+    selection-color: #eceff4;
+}
+
+QMainWindow {
+    background-color: #2e3440;
+    border: 1px solid #4c566a;
+}
+
+/* Buttons */
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #4c566a, stop:1 #3b4252);
+    color: #eceff4;
+    border: 1px solid #5e81ac;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 500;
+    min-height: 20px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #5e81ac, stop:1 #4c566a);
+    border-color: #88c0d0;
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #3b4252, stop:1 #2e3440);
+}
+
+QPushButton[accent="true"] {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #88c0d0, stop:1 #5e81ac);
+    border-color: #88c0d0;
+    color: #2e3440;
+}
+
+/* Input Fields */
+QLineEdit, QSpinBox, QDoubleSpinBox, QComboBox {
+    background-color: #3b4252;
+    border: 1px solid #4c566a;
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: #eceff4;
+}
+
+QLineEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus, QComboBox:focus {
+    border-color: #88c0d0;
+    background-color: #434c5e;
+}
+
+/* Tabs */
+QTabWidget::pane {
+    border: 1px solid #4c566a;
+    background-color: #2e3440;
+    border-radius: 6px;
+}
+
+QTabBar::tab {
+    background: #3b4252;
+    color: #d8dee9;
+    padding: 10px 18px;
+    margin-right: 2px;
+    border: 1px solid #4c566a;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+QTabBar::tab:selected {
+    background: #2e3440;
+    color: #eceff4;
+    border-color: #88c0d0;
+    border-bottom: 2px solid #88c0d0;
+}
+
+QTabBar::tab:hover:!selected {
+    background: #434c5e;
+    color: #eceff4;
+}
+
+/* Lists and Tables */
+QListWidget, QTableWidget {
+    background-color: #2e3440;
+    border: 1px solid #4c566a;
+    border-radius: 6px;
+    alternate-background-color: #3b4252;
+    gridline-color: #4c566a;
+}
+
+QListWidget::item:selected, QTableWidget::item:selected {
+    background-color: #88c0d0;
+    color: #2e3440;
+}
+
+QListWidget::item:hover, QTableWidget::item:hover {
+    background-color: #434c5e;
+}
+
+/* Progress Bars */
+QProgressBar {
+    background-color: #3b4252;
+    border: 1px solid #4c566a;
+    border-radius: 4px;
+    text-align: center;
+    color: #eceff4;
+}
+
+QProgressBar::chunk {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                stop:0 #88c0d0, stop:1 #5e81ac);
+    border-radius: 3px;
+}
+
+/* Status Bar */
+QStatusBar {
+    background-color: #3b4252;
+    border-top: 1px solid #4c566a;
+    color: #d8dee9;
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    background: #3b4252;
+    width: 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background: #4c566a;
+    border-radius: 6px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #88c0d0;
+}
+
+/* Menu */
+QMenu {
+    background-color: #3b4252;
+    color: #eceff4;
+    border: 1px solid #4c566a;
+    border-radius: 6px;
+}
+
+QMenu::item:selected {
+    background-color: #88c0d0;
+    color: #2e3440;
+}

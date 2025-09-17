@@ -1,11 +1,158 @@
-QWidget { color: #e0e0e0; background-color: #121212; }
-QPushButton { background: #1e1e1e; border: 1px solid #2b2b2b; padding: 6px 10px; }
-QPushButton:hover { background: #2a2a2a; }
-QLineEdit, QSpinBox, QComboBox { background: #1a1a1a; border: 1px solid #2b2b2b; padding: 4px; }
-QTabWidget::pane { border: 1px solid #2b2b2b; }
-QTabBar::tab { background: #1a1a1a; padding: 6px; }
-QTabBar::tab:selected { background: #2a2a2a; }
-QListWidget { background: #141414; border: 1px solid #2b2b2b; }
-QMenu { background: #1a1a1a; color: #e0e0e0; border: 1px solid #2b2b2b; }
-QMenu::item:selected { background: #2a2a2a; }
-QStatusBar { background: #1a1a1a; }
+/* Dark Theme - Modern Dark Interface */
+QWidget {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: "Segoe UI", "Inter", sans-serif;
+    font-size: 13px;
+    selection-background-color: #0078d4;
+    selection-color: #ffffff;
+}
+
+QMainWindow {
+    background-color: #1e1e1e;
+    border: 1px solid #404040;
+}
+
+/* Buttons */
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #404040, stop:1 #2d2d2d);
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 500;
+    min-height: 20px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #505050, stop:1 #3d3d3d);
+    border-color: #0078d4;
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #2d2d2d, stop:1 #1e1e1e);
+}
+
+QPushButton[accent="true"] {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                stop:0 #0078d4, stop:1 #106ebe);
+    border-color: #0078d4;
+    color: #ffffff;
+}
+
+/* Input Fields */
+QLineEdit, QSpinBox, QDoubleSpinBox, QComboBox {
+    background-color: #2d2d2d;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: #ffffff;
+}
+
+QLineEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus, QComboBox:focus {
+    border-color: #0078d4;
+    background-color: #3d3d3d;
+}
+
+/* Tabs */
+QTabWidget::pane {
+    border: 1px solid #555555;
+    background-color: #1e1e1e;
+    border-radius: 6px;
+}
+
+QTabBar::tab {
+    background: #2d2d2d;
+    color: #cccccc;
+    padding: 10px 18px;
+    margin-right: 2px;
+    border: 1px solid #555555;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+QTabBar::tab:selected {
+    background: #1e1e1e;
+    color: #ffffff;
+    border-color: #0078d4;
+    border-bottom: 2px solid #0078d4;
+}
+
+QTabBar::tab:hover:!selected {
+    background: #3d3d3d;
+    color: #ffffff;
+}
+
+/* Lists and Tables */
+QListWidget, QTableWidget {
+    background-color: #1e1e1e;
+    border: 1px solid #555555;
+    border-radius: 6px;
+    alternate-background-color: #2d2d2d;
+    gridline-color: #555555;
+}
+
+QListWidget::item:selected, QTableWidget::item:selected {
+    background-color: #0078d4;
+    color: #ffffff;
+}
+
+QListWidget::item:hover, QTableWidget::item:hover {
+    background-color: #3d3d3d;
+}
+
+/* Progress Bars */
+QProgressBar {
+    background-color: #2d2d2d;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    text-align: center;
+    color: #ffffff;
+}
+
+QProgressBar::chunk {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                stop:0 #0078d4, stop:1 #106ebe);
+    border-radius: 3px;
+}
+
+/* Status Bar */
+QStatusBar {
+    background-color: #2d2d2d;
+    border-top: 1px solid #555555;
+    color: #cccccc;
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    background: #2d2d2d;
+    width: 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background: #555555;
+    border-radius: 6px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #0078d4;
+}
+
+/* Menu */
+QMenu {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 6px;
+}
+
+QMenu::item:selected {
+    background-color: #0078d4;
+    color: #ffffff;
+}

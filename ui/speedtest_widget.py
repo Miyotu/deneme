@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QPushButton, QLabel, QHBoxLayout, QDialog, QListWidget, QListWidgetItem
 from PySide6.QtGui import QPainter, QColor, QPen, QBrush, QFont, QLinearGradient
-from PySide6.QtCore import Qt, QTimer, QRectF, QPointF, QPropertyAnimation, QEasingCurve, pyqtProperty
+from PySide6.QtCore import Qt, QTimer, QRectF, QPointF, QPropertyAnimation, QEasingCurve, Property
 from core.internet_speed import run_speedtest, list_servers
 from core.settings import Settings
 import threading
@@ -27,7 +27,7 @@ class Gauge(QWidget):
             self._animation.setEndValue(self._value)
             self._animation.start()
     
-    @pyqtProperty(float)
+    @Property(float)
     def animatedValue(self):
         return self._animated_value
     
