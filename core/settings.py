@@ -7,7 +7,7 @@ CONFIG_PATH = os.path.join(CONFIG_DIR, "settings.json")
 
 @dataclass
 class UISettings:
-    theme: str = "tokyonight"
+    theme: str = "dark"
     language: str = "tr"
     show_overlay: bool = True
     use_rtss: bool = False
